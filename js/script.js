@@ -34,8 +34,23 @@ createApp({
         
         },
         methods:{
+            onClickPrev(){
+                   if(this.currentImage===0){
+                   this.currentImage= this.games.length-1;
+                    }else{
+                   this.currentImage--;
+                }
+            },
+            onClickNext(){
+                if(this.currentImage===this.games.length-1 ){
+                this.currentImage= 0;
+                 }else{
+                this.currentImage++;
+             }
+         },
+
             changeImage(index){
-                this.activeImage=index
+                this.currentImage=index
             },
         },
     }).mount('#App')
