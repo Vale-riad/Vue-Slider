@@ -2,7 +2,8 @@ const {createApp} = Vue;
 createApp({
     data(){
         return{
-            movies : [
+            currentImage: 0,
+            games : [
                 {
                     image: 'img/01.webp',
                     title: 'Marvel\'s Spiderman Miles Morale',
@@ -32,6 +33,5 @@ createApp({
             }
         
         },
-    }).mount('#app')
+    }).mount('#App')
 
-console.log(games);
